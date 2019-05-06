@@ -104,7 +104,7 @@
 			text-transform: none !important;
 		}
 
-		.icon .label {
+		.label {
 			  visibility: hidden;
   			  width: 120px;
 			  background-color: #00AAEE;
@@ -125,7 +125,7 @@
 			  transition: opacity 0.3s;
 		}
 
-		.icon:hover .label {
+		.label::hover {
              		visibility: visible;
 		}
 
