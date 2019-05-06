@@ -87,24 +87,8 @@
 		a:hover {
 			border-color: transparent;
 		}
-
-/* Icon */
-
-	.icon {
-		text-decoration: none;
-		position: relative;
-	}
-
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
-		}
-
-		.label {
+              
+                .a .label {
 			  visibility: hidden;
   			  width: 120px;
 			  background-color: #00AAEE;
@@ -125,8 +109,24 @@
 			  transition: opacity 0.3s;
 		}
 
-		.label::hover {
+		.a:hover .label {
              		visibility: visible;
+		}
+
+/* Icon */
+
+	.icon {
+		text-decoration: none;
+		position: relative;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
 		}
 
 /* Wrapper */
