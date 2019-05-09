@@ -28,7 +28,7 @@
 							<ul>	
 								<li><a href="https://projects-franbonafina.github.io/" class="icon fa-briefcase"><span>Portfolio</span></a></li>
 										
-								<li><a href="https://calendly.com/franbonafina/interview" target="_blank" class="icon fa-calendar"><span class="label">Agenda</span></a></li>
+								<li><a href="https://calendly.com/franbonafina/interview" target="_blank" class="icon fa-calendar"></a><span class="label">Agenda</span></li>
 
 								<li><a href="https://app.box.com/s/8erly514wpuvzo72m3my2xy8b5lwb7a5" target="_blank" class="icon fa-file-pdf-o"></a></li>
 								
@@ -51,13 +51,17 @@
 
 			</div>
 		</div>
-		
+			
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script>
+			$(document).ready(function(){
+    			$('.label').tooltip();
+  			});
+      		</script>	
 		<script>
 			window.onload = function() { document.body.className = ''; }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-
-    
+		</script>    
 	</body>
 </html>
