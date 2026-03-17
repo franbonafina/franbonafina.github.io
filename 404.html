@@ -27,18 +27,29 @@
     <script>
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
-      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
-      var segmentCount = 0;
-      var l = window.location;
-      if (l.pathname.length > 1 && !l.pathname.includes('/?/')) {
-        l.replace(
-          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-          l.pathname.split('/').slice(0, segmentCount + 1).join('/') + '/?/' +
-          l.pathname.slice(segmentCount + 1).replace(/&/g, '~and~') +
-          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-          l.hash
-        );
-      }
+      // This script takes the current url and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new url with only a query string and hash fragment,
+      // e.g., https://www.foo.tld/one/two?a=b&c=d#qwe, becomes
+      // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
+      // Note: this 404.html file must be at least 512 bytes for it to work
+      // with Internet Explorer (it is currently > 512 bytes)
+
+      // For a repo at https://github.com/user/repo
+      // hosted on GitHub Pages at https://user.github.io/repo/
+      // and a custom domain at https://example.com/
+      // change segmentCount to 1 if hosted on GitHub Pages
+      // and the repo is in a subfolder, e.g., https://user.github.io/repo/
+      // change segmentCount to 0 if hosted on GitHub Pages
+      // at the root, e.g., https://user.github.io/
+      // or custom domain, e.g., https://example.com/
+      // var segmentCount = 0;
+
+      // Only this needed for SPA routing
+      (function(l) {
+        if (l.pathname[0] !== '/' || l.pathname.length < 2) return;
+        l.replace(l.origin + '/?/' + l.pathname.slice(1) + l.search + l.hash);
+      })(window.location);
     </script>
   </head>
   <body>
