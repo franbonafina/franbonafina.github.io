@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
   <url>
     <loc>https://franbonafina.github.io/</loc>
-    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  
   <url>
     <loc>https://franbonafina.github.io/blog</loc>
-    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  
   <url>
     <loc>https://franbonafina.github.io/blog/a1b2c3d4-e5f6-7890-abcd-ef1234567890</loc>
-    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -24,4 +27,5 @@
       <image:caption>A visualization of the three-phase AI development process, showing how a single scientist's discovery flows through a translator's blueprint to become an engineer's production system.</image:caption>
     </image:image>
   </url>
+
 </urlset>
