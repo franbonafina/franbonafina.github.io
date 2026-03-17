@@ -1,7 +1,7 @@
 // Posts data - single source of truth for blog content
 const posts = [
   {
-    slug: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
+    slug: 'ai-product-paradox',
     title: 'The AI Product Paradox; Why Three People Beat Three Hundred',
     date: '2024-03-17',
     excerpt: 'In the race to build AI products, companies are making a fundamental mistake. Bigger teams are not better teams. The secret to success lies not in numbers, but in the precise sequence of three specific profiles.',
