@@ -28,15 +28,17 @@
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
       // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
-      var segmentCount = 1;
+      var segmentCount = 0;
       var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, segmentCount + 1).join('/') + '/?/' +
-        l.pathname.slice(segmentCount + 1).replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      if (l.pathname.length > 1 && !l.pathname.includes('/?/')) {
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          l.pathname.split('/').slice(0, segmentCount + 1).join('/') + '/?/' +
+          l.pathname.slice(segmentCount + 1).replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
+      }
     </script>
   </head>
   <body>
