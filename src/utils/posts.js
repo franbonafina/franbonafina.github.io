@@ -10,7 +10,7 @@ const posts = [
 
 Most AI projects don’t fail in the lab. They fail later, in production, when the system around the model matters more than the model itself. Across the tech industry, companies spend millions on AI initiatives, hiring dozens of engineers and data scientists, yet many projects never reach production. Meanwhile, a small handful consistently deliver working AI systems with remarkably small teams.
 
-I have spent years observing this pattern from the inside. Successful AI systems follow a structure that is less about scale and more about sequence. Not everyone is solving the same problem at the same time, and that often determines whether a system survives beyond experimentation.
+I have spent years observing this pattern from the inside. Successful AI systems follow a structure that is less about scale and more about sequence. **Not everyone is solving the same problem at the same time, and that often determines whether a system survives beyond experimentation.**
 
 Every AI system begins with a single scientist in a space that feels more like a laboratory than a product environment. The goal is not scalability or integration, but simply whether the AI can solve the problem. Data is incomplete, assumptions are simplified, experiments are discarded, yet something essential is discovered.
 

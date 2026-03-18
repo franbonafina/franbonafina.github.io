@@ -87,21 +87,34 @@ const Blog = () => {
           </div>
         </header>
         
-        <main style={{ maxWidth: '680px', margin: '0 auto' }}>
+        <main style={{ 
+          maxWidth: '680px', 
+          margin: '0 auto',
+          padding: '0 20px',
+          boxSizing: 'border-box',
+          '@media (max-width: 480px)': {
+            padding: '0 15px'
+          }
+        }}>
           {posts.map((post, index) => (
             <article 
               key={post.slug} 
               style={{ 
                 borderBottom: index < posts.length - 1 ? '1px solid #e5e5e7' : 'none',
-                padding: '35px 0',
-                display: 'flex',
+                padding: '30px 0',
+                display: 'grid',
+                gridTemplateColumns: '200px 1fr',
                 gap: '24px',
-                alignItems: 'flex-start'
+                alignItems: 'start',
+                '@media (max-width: 640px)': {
+                  gridTemplateColumns: '1fr',
+                  gap: '16px'
+                }
               }}
             >
               {post.image && (
                 <div style={{ 
-                  flex: '0 0 200px',
+                  width: '200px',
                   height: '133px',
                   overflow: 'hidden',
                   borderRadius: '4px',
@@ -127,7 +140,7 @@ const Blog = () => {
                 </div>
               )}
               
-              <div style={{ flex: '1', minWidth: '0' }}>
+              <div style={{ minWidth: '0' }}>
                 <time style={{ 
                   fontFamily: 'Georgia, "Times New Roman", serif',
                   fontSize: '13px',
