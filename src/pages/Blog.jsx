@@ -87,49 +87,19 @@ const Blog = () => {
           </div>
         </header>
         
-        <main style={{ 
-          maxWidth: '680px', 
-          margin: '0 auto',
-          padding: '0 20px',
-          boxSizing: 'border-box',
-          '@media (max-width: 480px)': {
-            padding: '0 15px'
-          }
-        }}>
+        <main className="blog-main">
           {posts.map((post, index) => (
             <article 
               key={post.slug} 
-              style={{ 
-                borderBottom: index < posts.length - 1 ? '1px solid #e5e5e7' : 'none',
-                padding: '30px 0',
-                display: 'grid',
-                gridTemplateColumns: '200px 1fr',
-                gap: '24px',
-                alignItems: 'start',
-                '@media (max-width: 640px)': {
-                  gridTemplateColumns: '1fr',
-                  gap: '16px'
-                }
-              }}
+              className="blog-article"
             >
               {post.image && (
-                <div style={{ 
-                  width: '200px',
-                  height: '133px',
-                  overflow: 'hidden',
-                  borderRadius: '4px',
-                  backgroundColor: '#f5f5f7'
-                }}>
+                <div className="blog-image">
                   <img 
                     src={post.image}
                     alt={post.title}
                     loading="lazy"
-                    style={{ 
-                      width: '100%', 
-                      height: '100%', 
-                      objectFit: 'cover',
-                      transition: 'transform 0.3s ease'
-                    }}
+                    className="blog-image-img"
                     onMouseOver={(e) => {
                       e.target.style.transform = 'scale(1.05)'
                     }}
@@ -140,16 +110,8 @@ const Blog = () => {
                 </div>
               )}
               
-              <div style={{ minWidth: '0' }}>
-                <time style={{ 
-                  fontFamily: 'Georgia, "Times New Roman", serif',
-                  fontSize: '13px',
-                  color: '#999999',
-                  fontStyle: 'italic',
-                  marginBottom: '8px',
-                  display: 'block',
-                  letterSpacing: '0.3px'
-                }}>
+              <div className="blog-content">
+                <time className="blog-date">
                   {new Date(post.date).toLocaleDateString('en-US', { 
                     year: 'numeric', 
                     month: 'long', 
@@ -157,22 +119,10 @@ const Blog = () => {
                   })}
                 </time>
                 
-                <h2 style={{ 
-                  fontFamily: 'Georgia, "Times New Roman", serif',
-                  fontSize: '24px',
-                  fontWeight: '700',
-                  color: '#121212',
-                  marginBottom: '12px',
-                  lineHeight: '1.2',
-                  letterSpacing: '-0.3px'
-                }}>
+                <h2 className="blog-title">
                   <Link 
                     to={`/blog/${post.slug}`}
-                    style={{ 
-                      color: 'inherit', 
-                      textDecoration: 'none',
-                      transition: 'color 0.2s ease'
-                    }}
+                    className="blog-link"
                     onMouseOver={(e) => {
                       e.target.style.color = '#0071e3'
                     }}
@@ -184,14 +134,7 @@ const Blog = () => {
                   </Link>
                 </h2>
                 
-                <p style={{ 
-                  fontFamily: 'Georgia, "Times New Roman", serif',
-                  fontSize: '16px',
-                  lineHeight: '1.5',
-                  color: '#333333',
-                  marginBottom: '0',
-                  fontWeight: '400'
-                }}>
+                <p className="blog-excerpt">
                   {post.excerpt}
                 </p>
               </div>
